@@ -8,7 +8,7 @@ async function process () {
  for(line of lines) {
     var newline = line.split(';')
 
-    console.log(`Email: ${newline[0]}, Password: ${newline[1]}`)
+    console.log(`User: ${newline[0]}, Password: ${newline[1]}`)
 
     const browser = await puppeteer.launch({
             headless: true,
@@ -18,9 +18,9 @@ async function process () {
           page.waitForTimeout(2000)    
 
           await page.goto('https://example.com');         
-          await page.type('[type="email"]', newline[0])          
-          await page.type('[type="password"]', newline[1])          
-          await page.click('[type="button"]')
+          await page.type('[type="user"]', newline[0])          
+          await page.type('[type="P=password"]', newline[1])          
+          await page.click('[type="submit"]')
           await page.waitForTimeout(2000) 
 
           try {           

@@ -19,7 +19,7 @@ async function process () {
 
           await page.goto('https://example.com');         
           await page.type('[type="user"]', newline[0])          
-          await page.type('[type="P=password"]', newline[1])          
+          await page.type('[type="password"]', newline[1])          
           await page.click('[type="submit"]')
           await page.waitForTimeout(2000) 
 

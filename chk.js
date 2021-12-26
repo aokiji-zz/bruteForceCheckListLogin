@@ -32,7 +32,7 @@ async function process () {
           } catch (error) {            
             fs.appendFile('correct.txt', `${newline[0]}, ${newline[1]}, '\n\r'`, function (err) {
               if (err) throw err;
-              console.log('Correct!!' + error);
+              console.log('\x1b[32m', 'Correct!!' + error);
             })
           }
          

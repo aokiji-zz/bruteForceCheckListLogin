@@ -1,4 +1,3 @@
-import getConnection from './server'
 import readline from 'readline'
 require('dotenv').config()
 const fs = require('fs')

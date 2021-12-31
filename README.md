@@ -1,4 +1,3 @@
 # bruteForceNodeForURL
-Esse repositório tem cunho explicativo, servindo para testar as aplicações contra os Brute Forces.
-Duas medidas podem ser poderosas contra esse tipo de ataque, as Blacklist, que permite banir determinados IPs de acessar nossas aplicações, e os 2FA, que faz com que o atacante necessite do Token para acessar aplicação, é considerada uma boa ferramenta de segurança já que existe uma segunda barreira robusta. 
-Para saber se defender desse tipo de ataque.
+This repository is explanatory in nature, serving to test applications against Brute Forces. Two measures can be powerful against this type of attack, Blacklist, which allows you to ban certain IPs from accessing our applications, and 2FA, which makes the attacker need the Token to access application, is considered a good security tool since there is a second robust barrier. To know how to defend against this kind of attack.
+@aokiji-zz

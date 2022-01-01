@@ -40,6 +40,7 @@ async function processar () {
           await page.waitForTimeout(1000)
             await page.click('[class="submit"]')
             await page.waitForTimeout(1000)
+          
           let clicar =  await page.waitForSelector('[id="loginError"]', {visible: true});
            if (clicar) {
              console.log('\x1b[31m', "Credentials Error")

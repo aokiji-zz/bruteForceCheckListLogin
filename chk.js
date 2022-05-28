@@ -7,7 +7,7 @@ puppeteer.use(StealthPlugin())
 async function run () {  
  var inputScan = readline.createInterface({
    input: process.stdin,
-   output: process.output
+   output: process.stdout
  })
  console.log("digit your list.txt: ")
  inputScan.question("DIGIT YOUR LIST.TXT: ", async function(awnser){
